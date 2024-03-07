@@ -5,10 +5,16 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float velocidad;
+    public GameObject shot;
+    public Transform shotSpawn;
 
     private void Update()
     {
-      //  Instantiate(Shot, position, rotation);
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            Instantiate(shot, shotSpawn.position, shotSpawn.rotation); 
+        }
+
     }
     private void FixedUpdate()
     {
