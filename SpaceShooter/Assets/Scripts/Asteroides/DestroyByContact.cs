@@ -21,9 +21,16 @@ public class DestroyByContact : MonoBehaviour
         {
             Instantiate(PlayerExplosion, other.transform.position, other.transform.rotation); ;
         }
-        
-        Destroy(other.gameObject);
+
+
+        if (other.tag != "ChShot")
+
+        {
+            Destroy(other.gameObject);
+        }
+
         Destroy(gameObject);
+
     }
 
 
